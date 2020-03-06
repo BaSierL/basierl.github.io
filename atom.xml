@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://basierl.github.io</id>
     <title>Auroot - Blog</title>
-    <updated>2020-03-06T10:44:44.821Z</updated>
+    <updated>2020-03-06T11:12:55.314Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://basierl.github.io"/>
     <link rel="self" href="https://basierl.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://basierl.github.io/images/avatar.png</logo>
     <icon>https://basierl.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Auroot - Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Arch Linux 安装]]></title>
+        <id>https://basierl.github.io/arch-linux-an-zhuang/</id>
+        <link href="https://basierl.github.io/arch-linux-an-zhuang/">
+        </link>
+        <updated>2020-03-06T11:10:37.000Z</updated>
+        <content type="html"><![CDATA[<p>Arch Linux + Desktop 攻略<br>
+免指令脚本<br>
+Bilibili - 详细视频讲解</p>
+<pre><code>wget archfi.sf.net/archfi    # 获取archfi​
+chmod +x archfi               # 增加脚本的可执行权限​
+./archfi                               # 运行脚本​```
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://basierl.github.io/hello-gridea/</id>
