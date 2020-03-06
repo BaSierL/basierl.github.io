@@ -1,37 +1,32 @@
-## Welcome to GitHub Pages
+# Gridea 主题 Paper
 
-You can use the [editor on GitHub](https://github.com/BaSierL/basierl.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+一款简洁的 Gridea 主题，聚焦内容
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<div align="center">
+  <img src="theme.jpg">
+</div>
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## 开发
+```
+$ npm install
+$ npm run dev
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**项目各文件夹内已写 README，开发主题前敬请阅读！**
 
-### Jekyll Themes
+`/assets`、`/templates` 必须，Gridea 使用主题时必须文件夹  
+`config.json` 可选，主题信息和自定义配置字段信息  
+`style-override.js` 可选，根据自定义配置信息生成 css 方法文件  
+`/images` 文件夹仅为预览渲染 avatar 所用  
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BaSierL/basierl.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Mock 数据来源：https://github.com/getgridea/mock-json
 
-### Support or Contact
+Gridea 主题开发支持 less，若不熟悉 less 语法，尽可使用 css 语法编写，只不过文件名需要保持 `main.less`
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+网页链接仅为预览效果所用
+
+主题开发文档：https://gridea.dev/docs/theme.html
+
+欢迎开发 Gridea 主题！
+
+😘 Enjoy~
