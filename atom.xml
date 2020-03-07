@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://basierl.github.io</id>
     <title>Auroot - Blog</title>
-    <updated>2020-03-07T09:02:17.617Z</updated>
+    <updated>2020-03-07T09:09:57.580Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://basierl.github.io"/>
     <link rel="self" href="https://basierl.github.io/atom.xml"/>
@@ -104,7 +104,7 @@ mkinitcpio -p linux
 passwd 用户名           #给用户设置密码
 </code></pre>
 <p>需要开启的服务:</p>
-<pre><code>systemctl enable NetworkManager    #网络服务,不开没网
+<pre><code class="language-shell">systemctl enable NetworkManager    #网络服务,不开没网
 systemctl start NetworkManager
 
 systemctl enable sshd.service      #SSH远程服务,随意
@@ -150,7 +150,7 @@ load-module module-bluetooth-discover
 <ul>
 <li>所有Video 驱动:</li>
 </ul>
-<pre><code>xf86-video-amdgpu                   
+<pre><code class="language-shell">xf86-video-amdgpu                   
 xf86-video-ati                      
 xf86-video-dummy                    
 xf86-video-fbdev                    
@@ -349,7 +349,6 @@ sudo systemctl enable sddm          # 加入开机自启
     cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
 </code></pre>
 <pre><code class="language-shell">sudo pacman -S konsole               # KDE终端``` 
-
 &lt;hr&gt;
 
 # Gnome 桌面

@@ -1,123 +1,108 @@
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
-<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    Arch Linux 安装 | Auroot - Blog
-</title>
-<link rel="shortcut icon" href="https://basierl.github.io/favicon.ico?v=1583571735564">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>Arch Linux 安装 | Auroot - Blog</title>
+<link rel="shortcut icon" href="https://basierl.github.io/favicon.ico?v=1583572196578">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://basierl.github.io/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://basierl.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Arch Linux 安装 | Auroot - Blog - Atom Feed" href="https://basierl.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
-        
-</head>
 
-<body>
+    <meta name="description" content="ArchLinux script Installer (脚本视图)
+
+
+Arch Linux + Desktop 攻略
+免指令脚本
+Bilibili - 详细视频讲解
+wget archfi.sf.net/archfi    # 获取arc..." />
+    <meta name="keywords" content="ArchLinux,ArcoLinux" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
     <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://basierl.github.io">
-                <img class="avatar" src="https://basierl.github.io/images/avatar.png?v=1583571735564" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    Auroot - Blog
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
-    </div>
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://basierl.github.io">
+  <img class="avatar" src="https://basierl.github.io/images/avatar.png?v=1583572196578" alt="">
+  </a>
+  <h1 class="site-title">
+    Auroot - Blog
+  </h1>
+  <p class="site-description">
+    小鹿史记
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            Arch Linux 安装
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2020-03-06</time>
-                            
-                                <a href="https://basierl.github.io/tag/ArchLinux/" class="post-tag i-tag
-                            i-tag-other_2">
-                            #ArchLinux
-                        </a>
-                                
-                                <a href="https://basierl.github.io/tag/ArcoLinux/" class="post-tag i-tag
-                            i-tag-primary">
-                            #ArcoLinux
-                        </a>
-                                
-                        </div>
-                        
-                                <div class="post-content">
-                                    <h2 id="archlinux-script-installer-脚本视图">ArchLinux script Installer (脚本视图)</h2>
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Arch Linux 安装
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-03-06
+              </span>
+              <span>
+                17 min read
+              </span>
+              
+                <a href="https://basierl.github.io/tag/ArchLinux/" class="post-tag">
+                  # ArchLinux
+                </a>
+              
+                <a href="https://basierl.github.io/tag/ArcoLinux/" class="post-tag">
+                  # ArcoLinux
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="archlinux-script-installer-脚本视图">ArchLinux script Installer (脚本视图)</h2>
 <figure data-type="image" tabindex="1"><img src="https://gitee.com/auroot/arch_wiki/raw/master/Img/archlinux/img1.png?raw=true" alt="脚本截图信息" loading="lazy"></figure>
 <hr>
 <h1 id="arch-linux-desktop-攻略">Arch Linux + Desktop 攻略</h1>
@@ -205,7 +190,7 @@ mkinitcpio -p linux
 passwd 用户名           #给用户设置密码
 </code></pre>
 <p>需要开启的服务:</p>
-<pre><code>systemctl enable NetworkManager    #网络服务,不开没网
+<pre><code class="language-shell">systemctl enable NetworkManager    #网络服务,不开没网
 systemctl start NetworkManager
 
 systemctl enable sshd.service      #SSH远程服务,随意
@@ -251,7 +236,7 @@ load-module module-bluetooth-discover
 <ul>
 <li>所有Video 驱动:</li>
 </ul>
-<pre><code>xf86-video-amdgpu                   
+<pre><code class="language-shell">xf86-video-amdgpu                   
 xf86-video-ati                      
 xf86-video-dummy                    
 xf86-video-fbdev                    
@@ -450,7 +435,6 @@ sudo systemctl enable sddm          # 加入开机自启
     cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
 </code></pre>
 <pre><code class="language-shell">sudo pacman -S konsole               # KDE终端``` 
-
 &lt;hr&gt;
 
 # Gnome 桌面
@@ -682,33 +666,9 @@ UUID=ID     /mnt/c          ntfs,ntfs-3g        defaults,auto,uid=1000,gid=985,u
 </code></pre>
 <h1 id="待续">待续....</h1>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="https://basierl.github.io/post/hello-gridea/">
-                                <h3 class="post-title">
-                                    Hello Gridea
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                        <!-- toc -->
-                        
-    <div class="toc-card i-card ">
-        <div class="toc-title i-card-title">目录</div>
-        <div class="toc-content">
-            <ul class="markdownIt-TOC">
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
 <li>
 <ul>
 <li><a href="#archlinux-script-installer-%E8%84%9A%E6%9C%AC%E8%A7%86%E5%9B%BE">ArchLinux script Installer (脚本视图)</a></li>
@@ -782,60 +742,73 @@ UUID=ID     /mnt/c          ntfs,ntfs-3g        defaults,auto,uid=1000,gid=985,u
 <li><a href="#%E5%BE%85%E7%BB%AD">待续....</a></li>
 </ul>
 
-        </div>
-        <script>
-            function locateCatelogList() {
-                /*获取文章目录集合,可通过:header过滤器*/
-                var alis = $('.post-content :header');
-                /*获取侧边栏目录列表集合**/
-                var sidebar_alis = $('.markdownIt-TOC a');
-                /*获取滚动条到顶部的距离*/
-                var scroll_height = $(window).scrollTop();
-                for (var i = 0; i < alis.length; i++) {
-                    /*获取锚点集合中的元素分别到顶点的距离*/
-                    var a_height = $(alis[i]).offset().top;
-                    if (a_height < scroll_height) {
-                        /*高亮显示*/
-                        sidebar_alis.removeClass('on');
-                        $(sidebar_alis[i]).addClass('on');
-                    }
-                }
-            }
-            $(function() {
-                /*绑定滚动事件 */
-                $(window).bind('scroll', locateCatelogList);
-            });
-        </script>
-    </div>
-    
-                            
-
-                </div>
-
-
-
-
+              </div>
             </div>
+          </article>
+        </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://basierl.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
 
-            <div class="site-footer">
-  By <a href="https://basierl.github.io" target="_blank">Auroot</a> | 
-  <a class="rss" href="https://basierl.github.io/atom.xml" target="_blank">RSS</a>
+        
+
+        <div class="site-footer">
+  By <a href="https://basierl.github.io" target="_blank">Auroot</a>
+  <a class="rss" href="https://basierl.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
-
+      </div>
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
-</body>
 
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
 </html>
