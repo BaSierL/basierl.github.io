@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://basierl.github.io</id>
     <title>Auroot - Blog</title>
-    <updated>2020-03-07T09:13:25.861Z</updated>
+    <updated>2020-03-07T09:17:38.366Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://basierl.github.io"/>
     <link rel="self" href="https://basierl.github.io/atom.xml"/>
@@ -347,18 +347,15 @@ sudo pacman -S kde-applications-meta        # 全部加游戏，什么都有，�
 sudo systemctl enable sddm          # 加入开机自启 
     echo &quot;exec startkde&quot; &gt;&gt; /etc/X11/xinit/xinitrc  
     cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
+
+sudo pacman -S konsole               # KDE终端
 </code></pre>
-<pre><code class="language-shell">sudo pacman -S konsole               # KDE终端``` 
-&lt;hr&gt;
-
-# Gnome 桌面
-![Image Gnome_Desktop](https://images.gitee.com/uploads/images/2020/0302/152750_9d75eb84_5700645.png &quot;desktop_8t.png&quot;)
-
-### **安装桌面**
-
-[ArchLinux_Wiki - GNOME](https://wiki.archlinux.org/index.php/GNOME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
-```shell
-gnome-extra 额外包，可不装。
+<hr>
+<h1 id="gnome-桌面">Gnome 桌面</h1>
+<figure data-type="image" tabindex="4"><img src="https://images.gitee.com/uploads/images/2020/0302/152750_9d75eb84_5700645.png" alt="Image Gnome_Desktop" title="desktop_8t.png" loading="lazy"></figure>
+<h3 id="安装桌面-3"><strong>安装桌面</strong></h3>
+<p><a href="https://wiki.archlinux.org/index.php/GNOME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - GNOME</a></p>
+<pre><code class="language-shell">gnome-extra 额外包，可不装。
 sudo pacman -S xorg xorg-server xorg-xinit mesa gnome gdm
     sudo systemctl enable gdm 
     echo &quot;exec gnome=session&quot; &gt;&gt; /etc/X11/xinit/xinitrc
