@@ -12,10 +12,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://basierl.github.io/favicon.ico?v=1583572655525">
+<link rel="shortcut icon" href="https://basierl.github.io/favicon.ico?v=1583572870135">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://basierl.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -30,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://basierl.github.io">
-        <img class="avatar" src="https://basierl.github.io/images/avatar.png?v=1583572655525" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://basierl.github.io/images/avatar.png?v=1583572870135" alt="" width="32px" height="32px">
       </a>
       <a href="https://basierl.github.io">
         <h1 class="site-title">Auroot - Blog</h1>
@@ -103,8 +109,7 @@
             
           </div>
           <div class="post-content">
-            <h2 id="archlinux-script-installer-脚本视图">ArchLinux script Installer (脚本视图)</h2>
-<figure data-type="image" tabindex="1"><img src="https://gitee.com/auroot/arch_wiki/raw/master/Img/archlinux/img1.png?raw=true" alt="脚本截图信息" loading="lazy"></figure>
+            <figure data-type="image" tabindex="1"><img src="https://gitee.com/auroot/arch_wiki/raw/master/Img/archlinux/img1.png?raw=true" alt="script Installer (脚本视图)" loading="lazy"></figure>
 <hr>
 <h1 id="arch-linux-desktop-攻略">Arch Linux + Desktop 攻略</h1>
 <h2 id="免指令脚本"><strong>免指令脚本</strong></h2>
@@ -679,6 +684,12 @@ UUID=ID     /mnt/c          ntfs,ntfs-3g        defaults,auto,uid=1000,gid=985,u
       </div>
 
       
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
 
       <div class="site-footer">
   <div class="slogan">小鹿史记</div>
@@ -712,6 +723,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
