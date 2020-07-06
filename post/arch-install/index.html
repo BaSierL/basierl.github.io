@@ -5,14 +5,14 @@
     
 <meta charset="utf-8" >
 
-<title>Arch Linux 安装😇 | Auroot - Blog</title>
+<title>Arch Linux 安装 😇 | Auroot - Blog</title>
 <meta name="description" content="小鹿史记">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://basierl.github.io/favicon.ico?v=1594026208957">
+<link rel="shortcut icon" href="https://basierl.github.io/favicon.ico?v=1594027926563">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://basierl.github.io/styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://basierl.github.io">
-        <img class="avatar" src="https://basierl.github.io/images/avatar.png?v=1594026208957" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://basierl.github.io/images/avatar.png?v=1594027926563" alt="" width="32px" height="32px">
       </a>
       <a href="https://basierl.github.io">
         <h1 class="site-title">Auroot - Blog</h1>
@@ -89,7 +89,7 @@
             <div class="feature-container" style="background-image: url('https://gitee.com/auroot/arch_wiki/raw/master/Img/archlinux/img1.png')">
             </div>
           
-          <h2 class="post-title">Arch Linux 安装😇</h2>
+          <h2 class="post-title">Arch Linux 安装 😇</h2>
           <div class="post-info post-detail-info">
             <span><i class="icon-calendar-outline"></i> 2020-03-06</span>
             
@@ -112,7 +112,8 @@
             
           </div>
           <div class="post-content">
-            <h1 id="arch-linux-desktop-攻略">Arch Linux + Desktop 攻略</h1>
+            <h4 id="arch-linux-与一些软件的配置如搜狗tim网易云音乐zsh-驱动等">Arch Linux 与一些软件的配置，如搜狗，tim，网易云音乐，Zsh 驱动等.....</h4>
+<!-- more -->
 <h2 id="免指令脚本"><strong>免指令脚本</strong></h2>
 <p><a href="https://www.bilibili.com/video/av88989589">Bilibili - 详细视频讲解</a></p>
 <pre><code class="language-shell">wget archfi.sf.net/archfi    # 获取archfi​
@@ -132,12 +133,14 @@ systemctl start dhcpcd      #开启DHCP服务
 wifi-menu                   #连接wifi
 </code></pre>
 <h3 id="三-配置-mirrort">三、配置 Mirrort</h3>
-<pre><code class="language-shell">** 阿里云源
+<pre><code class="language-shell"># 命令替换
 sed -i &quot;6i Server = http://mirrors.aliyun.com/archlinux/\$repo/os/\$arch&quot; /etc/pacman.d/mirrorlist
-** 网易云163 **
 sed -i &quot;6i Server = https://mirrors.163.com/archlinux/\$repo/os/\$arch&quot; /etc/pacman.d/mirrorlist
-** 清华大学
 sed -i &quot;6i Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/\$arch&quot; /etc/pacman.d/mirrorlist
+# 自行替换
+Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
+Server = https://mirrors.163.com/archlinux/$repo/os/$arch
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 更新一下
 sudo pacman -Sy
@@ -406,82 +409,6 @@ Section &quot;Device&quot;
 EndSection
 </code></pre>
 <hr> 
-<h1 id="deepin-桌面安装">Deepin 桌面安装</h1>
-<figure data-type="image" tabindex="1"><img src="https://images.gitee.com/uploads/images/2020/0216/212915_593e4787_5700645.jpeg" alt="Image text" loading="lazy"></figure>
-<h4 id="安装桌面"><strong>安装桌面</strong></h4>
-<p><a href="https://wiki.archlinux.org/index.php/Deepin_Desktop_Environment_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - DEEPIN</a></p>
-<pre><code class="language-shell">sudo pacman -S xorg xorg-server xorg-xinit mesa deepin deepin-extra lightdm
-
-vim /etc/lightdm/lightdm.conf
-
-  greeter-session=example-gtk-gnome       # 用VIM 找到这个
-  
-  greeter-session=lightdm-deepin-greeter  # 替换为这个
-
-sudo systemctl enable lightdm             # 加入开机自启
-
-vim /etc/X11/xinit/xinitrc  # 配置这个文件
-
-  exec startdde     # 添加这个
-  
-cp /etc/X11/xinit/xinitrc /home/用户名/.xinitrc
-
-systemctl start lightdm     # 开启桌面 
-</code></pre>
-<hr>
-<h1 id="kde-桌面">Kde 桌面</h1>
-<figure data-type="image" tabindex="2"><img src="https://images.gitee.com/uploads/images/2020/0302/152309_29015fac_5700645.jpeg" alt="Image KDE_Desktop" title="kde.jpg" loading="lazy"></figure>
-<h3 id="安装桌面-2"><strong>安装桌面</strong></h3>
-<p><a href="https://wiki.archlinux.org/index.php/KDE_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - KDE</a></p>
-<pre><code class="language-shell">sudo pacman -S sddm sddm-kcm plasma xorg xorg-server xorg-xinit mesa     # 安装软件包 
-
-sudo pacman -S plasma-desktop plasma-meta   # 完整桌面，软件自己安装
-sudo pacman -S kde-applications-meta        # 全部加游戏，什么都有，臃肿
-sudo systemctl enable sddm          # 加入开机自启 
-    echo &quot;exec startkde&quot; &gt;&gt; /etc/X11/xinit/xinitrc  
-    cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
-
-sudo pacman -S konsole               # KDE终端
-</code></pre>
-<hr>
-<h1 id="gnome-桌面">Gnome 桌面</h1>
-<figure data-type="image" tabindex="3"><img src="https://images.gitee.com/uploads/images/2020/0302/152750_9d75eb84_5700645.png" alt="Image Gnome_Desktop" title="desktop_8t.png" loading="lazy"></figure>
-<h3 id="安装桌面-3"><strong>安装桌面</strong></h3>
-<p><a href="https://wiki.archlinux.org/index.php/GNOME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - GNOME</a></p>
-<pre><code class="language-shell">gnome-extra 额外包，可不装。
-sudo pacman -S xorg xorg-server xorg-xinit mesa gnome gdm
-    sudo systemctl enable gdm 
-    echo &quot;exec gnome=session&quot; &gt;&gt; /etc/X11/xinit/xinitrc
-    cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
-</code></pre>
-<p>进入登录界面后，设置为以 GNOME no Xorg模式登入（推荐）</p>
-<pre><code class="language-shell">美化地址：https://www.pling.com/s/Gnome
-         https://www.opencode.net/explore/projects
-安装插件需要的软件：
-sudo pacman -S gnome-tweaks gnome-shell-extensions
-</code></pre>
-<p><strong>插件</strong></p>
-<pre><code class="language-shell">Arch Linux Updates Indicator    archlinux软件更新检测插件,需要配合pacman-contrib使用
-Caffeine                                 防止自动挂起
-Clipboard Indicator              一个剪贴板
-Coverflow Alt-Tab                更好的窗口切换
-Dash to Dock                        把dash栏变为一个dock
-Dynamic Top Bar                  顶栏透明化
-Extension Update Notifier    gnome插件更新提示
-GnomeStatsPro                     一个系统监视器
-system-monitor                    又一个系统监视器
-Night Light Slider                 调节gnome夜间模式的亮度情况
-OpenWeather                      天气插件
-Proxy Switcher                     代理插件
-Random Wallpaper              自动切换壁纸,
-Simple net speed                            网速监测
-Sound Input &amp; Output Device Chooser    声音设备选择
-Status Area Horizontal Spacing      让顶栏更紧凑
-Suspend Button                              添加一个休眠按钮
-TopIcons Plus                                 把托盘图标放到顶栏
-Window Is Ready - Notification Remover      去除烦人的window is ready提醒
-</code></pre>
-<hr>
 <h2 id="aur源-backarch源">Aur源 \ Backarch源</h2>
 <h6 id="archlinux_wiki-aur安装"><strong><a href="https://wiki.archlinux.org/index.php/AUR_helpers_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - AUR安装</a></strong></h6>
 <h6 id="aur工具-yay"><strong><a href="https://github.com/Jguer/yay">AUR工具 - yay</a></strong></h6>
@@ -668,20 +595,38 @@ UUID=ID     /mnt/c          ntfs,ntfs-3g        defaults,auto,uid=1000,gid=985,u
 </ul>
 <pre><code class="language-shell">sudo pacman -S virtualbox-guest-utils  (For Virtualbox)
 </code></pre>
+<h1 id="zsh">zsh</h1>
+<h4 id="自动补全">自动补全.</h4>
+<pre><code>https://mimosa-pudica.net/zsh-incremental.html
+chmod 777 ～/.oh-my-zsh/plugins/incr/incr-0.2.zsh
+source ~/.oh-my-zsh/plugins/incr/incr-0.2.zsh
+</code></pre>
+<h4 id="autojump插件使你能够快速切换路径再也不需要逐个敲入目录只需敲入目标目录就可以迅速切换目录">autojump插件使你能够快速切换路径，再也不需要逐个敲入目录，只需敲入目标目录，就可以迅速切换目录。</h4>
+<pre><code>git clone git://github.com/joelthelion/autojump.git
+./install.py  
+# 在～/.zshrc文件中加入此句
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] &amp;&amp; . ~/.autojump/etc/profile.d/autojump.sh  
+</code></pre>
+<h4 id="安装zsh-autosuggestions">安装zsh-autosuggestions</h4>
+<pre><code>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+plugins=(zsh-autosuggestions)
+
+</code></pre>
+<h4 id="设置命令正确绿色高亮错误红色高亮">设置命令正确绿色高亮,错误红色高亮</h4>
+<pre><code>git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+plugins=(zsh-syntax-highlighting)
+</code></pre>
+<h4 id="加强zsh的补全功能实现tab自动纠错">加强zsh的补全功能实现tab自动纠错</h4>
+<h5 id="把这两句话添加到oh-my-zshlibcompletionzsh-末尾">把这两句话添加到oh-my-zsh/lib/completion.zsh (末尾)</h5>
+<pre><code>zstyle ':completion:incremental:*' completer _complete _correct
+zstyle ':completion:*' completer _complete _prefix _correct _prefix _match _approximate
+</code></pre>
 <h1 id="待续">待续....</h1>
 
           </div>
         </div>
 
         
-          <div class="next-post">
-            <a class="purple-link" href="https://basierl.github.io/post/hello-gridea/">
-              <h3 class="post-title">
-                下一篇：Hello Gridea
-              </h3>
-            </a>
-          </div>
-          
       </div>
 
       

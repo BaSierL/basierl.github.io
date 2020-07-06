@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>ArchLinux 桌面安装 | Auroot - Blog</title>
+<meta name="description" content="小鹿史记">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://basierl.github.io/favicon.ico?v=1594027926563">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://basierl.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://basierl.github.io">
+        <img class="avatar" src="https://basierl.github.io/images/avatar.png?v=1594027926563" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://basierl.github.io">
+        <h1 class="site-title">Auroot - Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://images.gitee.com/uploads/images/2020/0316/214433_1f1a068a_5700645.png')">
+            </div>
+          
+          <h2 class="post-title">ArchLinux 桌面安装</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-07-06</span>
+            
+          </div>
+          <div class="post-content">
+            <h3 id="安装配置deepin-plasma-gnome-xfce4">安装配置Deepin、Plasma、Gnome、Xfce4</h3>
+<!-- more -->
+<h1 id="deepin-桌面安装">Deepin 桌面安装</h1>
+<figure data-type="image" tabindex="1"><img src="https://images.gitee.com/uploads/images/2020/0216/212915_593e4787_5700645.jpeg" alt="Image text" loading="lazy"></figure>
+<h4 id="安装桌面"><strong>安装桌面</strong></h4>
+<p><a href="https://wiki.archlinux.org/index.php/Deepin_Desktop_Environment_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - DEEPIN</a></p>
+<pre><code>sudo pacman -S xorg xorg-server xorg-xinit mesa deepin deepin-extra lightdm
+
+vim /etc/lightdm/lightdm.conf
+
+  greeter-session=example-gtk-gnome       # 用VIM 找到这个
+  
+  greeter-session=lightdm-deepin-greeter  # 替换为这个
+
+sudo systemctl enable lightdm             # 加入开机自启
+
+vim /etc/X11/xinit/xinitrc  # 配置这个文件
+
+  exec startdde     # 添加这个
+  
+cp /etc/X11/xinit/xinitrc /home/用户名/.xinitrc
+
+systemctl start lightdm     # 开启桌面 
+</code></pre>
+<hr>
+<h1 id="kde-桌面">Kde 桌面</h1>
+<figure data-type="image" tabindex="2"><img src="https://images.gitee.com/uploads/images/2020/0316/214433_1f1a068a_5700645.png" alt="Image KDE_Desktop" loading="lazy"></figure>
+<h3 id="安装桌面-2"><strong>安装桌面</strong></h3>
+<p><a href="https://wiki.archlinux.org/index.php/KDE_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - KDE</a></p>
+<pre><code>sudo pacman -S sddm sddm-kcm plasma xorg xorg-server xorg-xinit mesa     # 安装软件包 
+
+sudo pacman -S plasma-desktop plasma-meta   # 完整桌面，软件自己安装
+sudo pacman -S kde-applications-meta        # 全部加游戏，什么都有，臃肿
+sudo systemctl enable sddm          # 加入开机自启 
+    echo &quot;exec startkde&quot; &gt;&gt; /etc/X11/xinit/xinitrc  
+    cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
+</code></pre>
+<p><code>sudo pacman -S konsole # KDE终端</code></p>
+<hr>
+<h1 id="gnome-桌面">Gnome 桌面</h1>
+<figure data-type="image" tabindex="3"><img src="https://images.gitee.com/uploads/images/2020/0302/152750_9d75eb84_5700645.png" alt="Image Gnome_Desktop" title="desktop_8t.png" loading="lazy"></figure>
+<h3 id="安装桌面-3"><strong>安装桌面</strong></h3>
+<p><a href="https://wiki.archlinux.org/index.php/GNOME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - GNOME</a></p>
+<pre><code>gnome-extra 额外包，可不装。
+sudo pacman -S xorg xorg-server xorg-xinit mesa gnome gdm
+    sudo systemctl enable gdm 
+    echo &quot;exec gnome=session&quot; &gt;&gt; /etc/X11/xinit/xinitrc
+    cp /etc/X11/xinit/xinitrc $HOME/.xinitrc
+</code></pre>
+<p>进入登录界面后，设置为以 GNOME no Xorg模式登入（推荐）</p>
+<pre><code>美化地址：https://www.pling.com/s/Gnome
+         https://www.opencode.net/explore/projects
+安装插件需要的软件：
+sudo pacman -S gnome-tweaks gnome-shell-extensions
+</code></pre>
+<p><strong>插件</strong></p>
+<pre><code>Arch Linux Updates Indicator    archlinux软件更新检测插件,需要配合pacman-contrib使用
+Caffeine                        防止自动挂起
+Clipboard Indicator             一个剪贴板
+Coverflow Alt-Tab               更好的窗口切换
+Dash to Dock                    把dash栏变为一个dock
+Dynamic Top Bar                 顶栏透明化
+Extension Update Notifier       gnome插件更新提示
+GnomeStatsPro                   一个系统监视器
+system-monitor                  又一个系统监视器
+Night Light Slider              调节gnome夜间模式的亮度情况
+OpenWeather                     天气插件
+Proxy Switcher                  代理插件
+Random Wallpaper                自动切换壁纸,
+Simple net speed                网速监测
+Sound Input &amp; Output Device Chooser 声音设备选择
+Status Area Horizontal Spacing  让顶栏更紧凑
+Suspend Button                  添加一个休眠按钮
+TopIcons Plus                   把托盘图标放到顶栏
+Window Is Ready - Notification Remover      去除烦人的window is ready提醒
+</code></pre>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://basierl.github.io/post/arch-install/">
+              <h3 class="post-title">
+                下一篇：Arch Linux 安装 😇
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">小鹿史记</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  By <a href="https://basierl.github.io" target="_blank">Auroot</a> | <a class="rss" href="https://basierl.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
