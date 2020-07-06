@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://basierl.github.io</id>
     <title>Auroot - Blog</title>
-    <updated>2020-03-07T09:23:03.720Z</updated>
+    <updated>2020-07-06T08:39:45.762Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://basierl.github.io"/>
     <link rel="self" href="https://basierl.github.io/atom.xml"/>
@@ -16,7 +16,7 @@
         <link href="https://basierl.github.io/post/arch-linux-an-zhuang/">
         </link>
         <updated>2020-03-06T11:10:37.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://gitee.com/auroot/arch_wiki/raw/master/Img/archlinux/img1.png?raw=true" alt="script Installer (脚本视图)" loading="lazy"></figure>
+        <content type="html"><![CDATA[<p><img src="https://basierl.github.io/post-images/1583573793414.png" alt="" loading="lazy">https://gitee.com/auroot/arch_wiki/raw/master/Img/archlinux/img1.png?raw=true</p>
 <hr>
 <h1 id="arch-linux-desktop-攻略">Arch Linux + Desktop 攻略</h1>
 <h2 id="免指令脚本"><strong>免指令脚本</strong></h2>
@@ -313,7 +313,7 @@ EndSection
 </code></pre>
 <hr> 
 <h1 id="deepin-桌面安装">Deepin 桌面安装</h1>
-<figure data-type="image" tabindex="2"><img src="https://images.gitee.com/uploads/images/2020/0216/212915_593e4787_5700645.jpeg" alt="Image text" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://images.gitee.com/uploads/images/2020/0216/212915_593e4787_5700645.jpeg" alt="Image text" loading="lazy"></figure>
 <h4 id="安装桌面"><strong>安装桌面</strong></h4>
 <p><a href="https://wiki.archlinux.org/index.php/Deepin_Desktop_Environment_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - DEEPIN</a></p>
 <pre><code class="language-shell">sudo pacman -S xorg xorg-server xorg-xinit mesa deepin deepin-extra lightdm
@@ -336,7 +336,7 @@ systemctl start lightdm     # 开启桌面
 </code></pre>
 <hr>
 <h1 id="kde-桌面">Kde 桌面</h1>
-<figure data-type="image" tabindex="3"><img src="https://images.gitee.com/uploads/images/2020/0302/152309_29015fac_5700645.jpeg" alt="Image KDE_Desktop" title="kde.jpg" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://images.gitee.com/uploads/images/2020/0302/152309_29015fac_5700645.jpeg" alt="Image KDE_Desktop" title="kde.jpg" loading="lazy"></figure>
 <h3 id="安装桌面-2"><strong>安装桌面</strong></h3>
 <p><a href="https://wiki.archlinux.org/index.php/KDE_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - KDE</a></p>
 <pre><code class="language-shell">sudo pacman -S sddm sddm-kcm plasma xorg xorg-server xorg-xinit mesa     # 安装软件包 
@@ -351,7 +351,7 @@ sudo pacman -S konsole               # KDE终端
 </code></pre>
 <hr>
 <h1 id="gnome-桌面">Gnome 桌面</h1>
-<figure data-type="image" tabindex="4"><img src="https://images.gitee.com/uploads/images/2020/0302/152750_9d75eb84_5700645.png" alt="Image Gnome_Desktop" title="desktop_8t.png" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://images.gitee.com/uploads/images/2020/0302/152750_9d75eb84_5700645.png" alt="Image Gnome_Desktop" title="desktop_8t.png" loading="lazy"></figure>
 <h3 id="安装桌面-3"><strong>安装桌面</strong></h3>
 <p><a href="https://wiki.archlinux.org/index.php/GNOME_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)">ArchLinux_Wiki - GNOME</a></p>
 <pre><code class="language-shell">gnome-extra 额外包，可不装。
