@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://basierl.github.io</id>
+    <id>http://49.235.197.200</id>
     <title>Auroot - Blog</title>
-    <updated>2020-08-09T05:53:26.281Z</updated>
+    <updated>2020-08-09T05:55:10.718Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://basierl.github.io"/>
-    <link rel="self" href="https://basierl.github.io/atom.xml"/>
+    <link rel="alternate" href="http://49.235.197.200"/>
+    <link rel="self" href="http://49.235.197.200/atom.xml"/>
     <subtitle>小鹿史记</subtitle>
-    <logo>https://basierl.github.io/images/avatar.png</logo>
-    <icon>https://basierl.github.io/favicon.ico</icon>
+    <logo>http://49.235.197.200/images/avatar.png</logo>
+    <icon>http://49.235.197.200/favicon.ico</icon>
     <rights>All rights reserved 2020, Auroot - Blog</rights>
     <entry>
         <title type="html"><![CDATA[ArchLinux 桌面安装]]></title>
-        <id>https://basierl.github.io/post/archlinux-zhuo-mian-an-zhuang/</id>
-        <link href="https://basierl.github.io/post/archlinux-zhuo-mian-an-zhuang/">
+        <id>http://49.235.197.200/post/archlinux-zhuo-mian-an-zhuang/</id>
+        <link href="http://49.235.197.200/post/archlinux-zhuo-mian-an-zhuang/">
         </link>
         <updated>2020-07-06T09:23:33.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="安装配置deepin-plasma-gnome-xfce4">安装配置Deepin、Plasma、Gnome、Xfce4</h3>
@@ -98,8 +98,8 @@ Window Is Ready - Notification Remover      去除烦人的window is ready提醒
     </entry>
     <entry>
         <title type="html"><![CDATA[Arch Linux 安装 😇]]></title>
-        <id>https://basierl.github.io/post/arch-install/</id>
-        <link href="https://basierl.github.io/post/arch-install/">
+        <id>http://49.235.197.200/post/arch-install/</id>
+        <link href="http://49.235.197.200/post/arch-install/">
         </link>
         <updated>2020-03-06T11:10:37.000Z</updated>
         <summary type="html"><![CDATA[<h4 id="arch-linux-与一些软件的配置如搜狗tim网易云音乐zsh-驱动等">Arch Linux 与一些软件的配置，如搜狗，tim，网易云音乐，Zsh 驱动等.....</h4>
